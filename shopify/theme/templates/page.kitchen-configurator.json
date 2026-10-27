@@ -1,0 +1,4 @@
+{
+  "sections": { "configurator": { "type": "kitchen-configurator", "settings": {} } },
+  "order": ["configurator"]
+}

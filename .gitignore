@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.local/
+test-results/
+playwright-report/
+shopify/theme/assets/casen-configurator.*
+.DS_Store
+tmp/
+*.inspect.ndjson

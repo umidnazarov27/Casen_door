@@ -1,0 +1,48 @@
+{
+  "name": "casen-doors",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24 <26"
+  },
+  "packageManager": "npm@11.9.0",
+  "scripts": {
+    "dev": "node --import tsx scripts/dev.ts",
+    "build": "npm run typecheck && vite build --config apps/configurator/vite.config.ts",
+    "build:theme": "vite build --config apps/configurator/vite.theme.config.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "playwright test",
+    "validate:catalogue": "node --import tsx scripts/validate-catalogue.ts",
+    "sample:pdf": "node --import tsx scripts/sample-pdf.ts"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "4.9.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "agent-browser": "0.38.1",
+    "eslint": "10.11.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.1",
+    "vite": "8.3.1",
+    "vitest": "4.1.11"
+  }
+}

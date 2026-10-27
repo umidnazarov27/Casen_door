@@ -1,0 +1,16 @@
+{{ 'casen-configurator.css' | asset_url | stylesheet_tag }}
+<div data-casen-configurator data-api-base="{{ section.settings.api_base | escape }}"></div>
+<noscript>Please enable JavaScript to use the kitchen configurator.</noscript>
+<script src="{{ 'casen-configurator.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Kitchen configurator",
+  "tag": "section",
+  "limit": 1,
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "text", "id": "api_base", "label": "App proxy path", "default": "/apps/casen-configurator", "info": "Must match the installed app proxy. Backend setup is required." }
+  ],
+  "presets": [{ "name": "Kitchen configurator" }]
+}
+{% endschema %}
