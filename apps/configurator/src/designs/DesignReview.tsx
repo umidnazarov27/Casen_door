@@ -21,7 +21,7 @@ export default function DesignReview({ apiBase }: { apiBase: string }) {
     document.title = concept ? `Casen Doors · ${concept.number} ${concept.name}` : 'Casen Doors · Three design directions';
     if (!concept) return;
     const controller = new AbortController();
-    fetch(`${apiBase}/catalogue`, { signal: controller.signal }).then(async response => {
+    fetch(`${apiBase}/catalogue${concept.id === 'signature' ? '?collection=client' : ''}`, { signal: controller.signal }).then(async response => {
       if (!response.ok) throw new Error('Не удалось загрузить варианты кухни.');
       setCatalogue(validateCatalogue(await response.json()));
     }).catch(error => { if (!controller.signal.aborted) setError(error instanceof Error ? error.message : 'Ошибка загрузки'); });

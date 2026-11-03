@@ -8,14 +8,15 @@ test('keeps selections, opens a real PDF without email, and exposes a download l
   await page.getByRole('radio', { name: /L-shaped/ }).check();
   await page.getByRole('button', { name: 'Continue to Island' }).click();
   await page.getByRole('radio', { name: /Compact island/ }).check();
-  await page.getByRole('button', { name: 'Continue to Storage' }).click();
-  await page.getByRole('checkbox', { name: /Cutlery organiser/ }).check();
   await page.getByRole('button', { name: 'Continue to Carcass' }).click();
   await page.getByRole('radio', { name: /Natural oak/ }).check();
+  await page.getByRole('button', { name: 'Continue to Storage' }).click();
+  await page.getByRole('checkbox', { name: /Cutlery organiser/ }).check();
   await expect(page.getByTestId('total')).toHaveText('£15,108');
   await page.getByRole('button', { name: 'Back', exact: true }).click();
+  await expect(page.getByRole('radio', { name: /Natural oak/ })).toBeChecked();
+  await page.getByRole('button', { name: 'Continue to Storage' }).click();
   await expect(page.getByRole('checkbox', { name: /Cutlery organiser/ })).toBeChecked();
-  await page.getByRole('button', { name: 'Continue to Carcass' }).click();
   await page.getByRole('button', { name: 'File Quotation' }).click();
   const link = page.getByRole('link', { name: 'View / download PDF' });
   await expect(link).toBeVisible();

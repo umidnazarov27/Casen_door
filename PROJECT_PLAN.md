@@ -2,6 +2,12 @@
 
 Prepared: 28 September 2026. Baseline: [MVP v1.3](docs/SOURCE_SPECIFICATION.md).
 
+## Latest implementation checkpoint
+
+4 November 2026: [Client collection 01](docs/client-inputs/2026-11-03/README.md) is integrated into the local Signature preview. Four layouts, two pictured islands plus no island, four carcass finishes and four storage systems use 14 supplied photos. Client feedback changes the flow to Layout → Island → Carcass → Storage. Prices are deferred; pending-price estimates and quotations are blocked. The client PDF is an option sheet, not the missing quotation sample. Pricing, dimensions, compatibility, exact title, production photo coverage and Shopify integration remain open. Verification details and assumptions are recorded with the inputs.
+
+Next: obtain approved pricing/VAT, dimensions, compatibility/storage rules and final product title; then connect the approved catalogue and finish the remaining product-page sections in the Shopify preview.
+
 ## Selected implementation approach
 
 Client follow-up, 25 October 2026: Option 01 is the selected design in the client's written feedback. Meeting notes add a proposed full kitchen product page and an administration discussion. The [meeting recap](docs/MEETING_2026-10-25.md) records the requests and unresolved scope/timeline questions. A 14-slide native Google Slides review, a seven-tab native Google Sheets input workbook and an English email draft are prepared; links are in the recap. Client sharing, sending the email and receipt of final materials remain outstanding. These preparation deliverables do not establish production completion or a revised launch date.
@@ -12,7 +18,7 @@ The [implementation plan](docs/IMPLEMENTATION_PLAN.md) defines the repository la
 
 ## Outcome and definition of finished
 
-Deliver a branded configurator inside the existing Casen Doors Shopify storefront. A customer completes Layout → Island → Storage → Carcass, sees valid options and an estimated price, opens a provisional PDF without entering an email address, and can separately request an emailed copy after confirmation.
+Deliver a branded configurator inside the existing Casen Doors Shopify storefront. A customer completes Layout → Island → Carcass → Storage, sees valid options and an estimated price, opens a provisional PDF without entering an email address, and can separately request an emailed copy after confirmation.
 
 Finished means the approved launch catalogue is installed, every valid final combination has its supplied quotation photograph, all ten source acceptance criteria pass with evidence, the approved integration is live without regressions to the existing store, and Casen Doors can maintain the catalogue and operate the quotation service. A local demo or preview is an intermediate milestone.
 

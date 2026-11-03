@@ -96,3 +96,9 @@
 @media (max-width:900px) { .stepContent { padding:24px 20px; } .gallery { padding-right:20px; } .intro { gap:25px; } .listCard { flex-wrap:wrap; } }
 @media (max-width:700px) { .header { padding:20px 6%; } .headerNote { font-size:9px; } .main { padding:0 5%; } .intro { display:block; padding:30px 0; } .intro h1 { font-size:56px; letter-spacing:-2px; } .intro>p { margin-top:23px; font-size:12px; } .workspace { display:block; } .gallery { position:static; padding:18px 0 25px; } .imageFrame { aspect-ratio:1.2; } .galleryNote { display:none; } .panel { border:1px solid var(--line); } .stepContent { padding:25px 18px; } .stepContent h2 { font-size:33px; } .priceBox { padding:22px 18px; } .actions { scroll-margin-bottom:20px; } .footer { margin-top:25px; padding:25px 0; } .card { padding:15px 10px; } .listCard { flex-wrap:nowrap; gap:9px; } .swatch { width:22px; } }
 @media (prefers-reduced-motion:no-preference) { .card, .listCard, .primary { transition:background .15s,border-color .15s; } }
+
+.optionImage { display:block; width:100%; aspect-ratio:1.65; object-fit:cover; margin-bottom:8px; }
+.optionThumbnail { display:block; width:88px; height:88px; object-fit:contain; background:#f3f1ec; flex-shrink:0; }
+.thumbnails { overflow-x:auto; padding-bottom:5px; }
+.thumbnails button { flex-shrink:0; }
+@media(max-width:760px) { .optionThumbnail { width:64px; height:72px; } }

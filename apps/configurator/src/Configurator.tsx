@@ -1,12 +1,11 @@
 import { formatMoney, REQUIRED_NOTICE, type Catalogue } from '@casen/domain';
-import { useConfigurationFlow } from './useConfigurationFlow';
+import { configurationSteps as steps, useConfigurationFlow } from './useConfigurationFlow';
 import { Gallery } from './Gallery';
 import { OptionCards } from './OptionCards';
 import styles from './Configurator.module.css';
 
-const steps = ['Layout', 'Island', 'Storage', 'Carcass'];
-const headings = ['Choose your layout', 'Make room for an island', 'A place for everything', 'Consider the inside'];
-const descriptions = ['Start with the arrangement that works for your space. Each preset has fixed dimensions.', 'Add a little more preparation space, or leave the centre open.', 'Choose the details that bring order to everyday life. Storage additions are optional.', 'Select the interior finish for your cabinetry, then review your provisional quotation.'];
+const headings = ['Choose your layout', 'Make room for an island', 'Consider the inside', 'A place for everything'];
+const descriptions = ['Start with the arrangement that works for your space. Each preset has fixed dimensions.', 'Add a little more preparation space, or leave the centre open.', 'Select the interior finish for your cabinetry.', 'Choose the details that bring order to everyday life. Storage additions are optional.'];
 
 export function Configurator({ catalogue, apiBase }: { catalogue: Catalogue; apiBase: string }) {
   const { state, selection, step, busy, error, pdfUrl, title, price, canContinue, maxStep, layout, select, navigate, fileQuotation } = useConfigurationFlow(catalogue, apiBase);

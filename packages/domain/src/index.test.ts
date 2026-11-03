@@ -5,6 +5,11 @@ import { demoCatalogue } from '../../../fixtures/catalogue';
 const complete = { layoutId: 'single', islandId: 'none', storageIds: [], carcassId: 'white' };
 
 describe('configuration and quotation rules', () => {
+  it('blocks estimates and quotations while client pricing is pending', () => {
+    const pending = validateCatalogue({ ...demoCatalogue, pricingStatus: 'pending' });
+    expect(() => calculatePrice(pending, complete)).toThrow(/pricing/i);
+    expect(() => createQuotation(pending, complete, new Date())).toThrow(/pricing/i);
+  });
   it('calculates base + island + storage + carcass using integer minor units', () => {
     const price = calculatePrice(demoCatalogue, { ...complete, layoutId: 'l-shape', islandId: 'compact', storageIds: ['cutlery'], carcassId: 'oak' });
     expect(price.subtotal).toBe(1_259_000);

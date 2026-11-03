@@ -5,6 +5,7 @@ export const REQUIRED_NOTICE = 'This is a provisional quotation with a 90-day va
 export const REFERENCE_LABEL = 'Reference image — not the exact selected combination';
 
 export function calculatePrice(catalogue: Catalogue, selection: Selection, requireComplete = true) {
+  if (catalogue.pricingStatus === 'pending') throw new Error('Client pricing is not available yet');
   const resolved = resolveSelection(catalogue, selection, requireComplete);
   const items = [resolved.layout, resolved.island, ...resolved.storage, resolved.carcass].filter(item => item !== null);
   const subtotal = items.reduce((sum, item) => sum + item.price, 0);

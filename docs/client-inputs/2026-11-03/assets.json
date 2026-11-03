@@ -1,0 +1,86 @@
+[
+  {
+    "attachment": 1,
+    "original": "codex-clipboard-d55cc1e0-22c8-4aff-bc6c-058f22f35505.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/island-standard.jpg",
+    "sha256": "d82125e115a3a1462bb3505a2215cbf6fd19c85cb6b4b1e89de33c8da31ee06d"
+  },
+  {
+    "attachment": 2,
+    "original": "codex-clipboard-7ebadda8-ee38-46d4-92a8-1e8eb371b276.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/storage-drawer-organiser.jpg",
+    "sha256": "115aa5d0be4b10303db07425590a65f032e527ebd5de884d410a47fb4fb330c6"
+  },
+  {
+    "attachment": 3,
+    "original": "codex-clipboard-f3892e0c-4fa2-4dca-8923-acf776d2144e.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/storage-spice-pull-out.jpg",
+    "sha256": "2982c68c4bd880a06ea63e27438ac1803fb5b6fc5161d849ab8b5fe58193846d"
+  },
+  {
+    "attachment": 4,
+    "original": "codex-clipboard-489452a2-7e26-4e08-a406-e0640f4b95f1.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/storage-tall-pull-out.jpg",
+    "sha256": "6da24b473cb97ea5fd282d9916d080912c343d33f4900c1a5275eee0ec0486ea"
+  },
+  {
+    "attachment": 5,
+    "original": "codex-clipboard-af19a671-225c-4146-b8ae-3b1cecc4a616.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/storage-swing-pantry.jpg",
+    "sha256": "7527eb9da541b37ac9365c6598009c0a5a14736122f715dc7d02460c67cad84f"
+  },
+  {
+    "attachment": 6,
+    "original": "codex-clipboard-c3a8c575-a41c-4125-aecf-c62b5d5d3607.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/layout-u-shape.jpg",
+    "sha256": "e5f567f94fd0f97696926e2dc3419685a3f24365622eddbc1a43dad3eccdfc6f"
+  },
+  {
+    "attachment": 7,
+    "original": "codex-clipboard-54f4ca30-b7ca-4e6e-ba42-6ee550099efc.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/layout-single-wall.jpg",
+    "sha256": "bb5323ff2c2825374190dd7964579a0403f08011f929a144489acc920be9bd89"
+  },
+  {
+    "attachment": 8,
+    "original": "codex-clipboard-a5ab126f-938b-47f8-b80e-8c961268b1e3.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/layout-galley.jpg",
+    "sha256": "73dbdd5f74304966c42a5660a562623acb91ec92e525f163f46dc27dcef0f898"
+  },
+  {
+    "attachment": 9,
+    "original": "codex-clipboard-450d5048-a978-4882-985f-a994755750a5.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/layout-l-shape.jpg",
+    "sha256": "5719b4837ef06d02ec60d63f351013e278177e5b9f122cbe640966f93ff2598f"
+  },
+  {
+    "attachment": 10,
+    "original": "codex-clipboard-31695a93-3268-4f03-91b6-b3b892449868.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/island-illuminated.jpg",
+    "sha256": "b85a97be52aec60ccebb823db1feee7b8aa1b5cb68f8388a57647399b89426c1"
+  },
+  {
+    "attachment": 11,
+    "original": "codex-clipboard-3af2b066-8d53-4be5-a53b-c01a841bae5c.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/carcass-gunmetal-grey.jpg",
+    "sha256": "a48932da6e775f5bf7dcc5320a0d3b7b3f5c9e920eed531b9334a114e22b212e"
+  },
+  {
+    "attachment": 12,
+    "original": "codex-clipboard-c263d3dc-eb7a-400e-b871-1f2f3e3b933c.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/carcass-oak.jpg",
+    "sha256": "da52e786e35732f3a309ffcd33d67e1665ac8309526f5e7c7f2797d49e19e4d4"
+  },
+  {
+    "attachment": 13,
+    "original": "codex-clipboard-e1943740-0dde-4ae7-9ba0-5490349723a8.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/carcass-matte-black.jpg",
+    "sha256": "39190d6a89446c9874a2ba6f2a2fbd04d0cc8c2d2098d44af62f460ad660dc12"
+  },
+  {
+    "attachment": 14,
+    "original": "codex-clipboard-21231e43-6124-443e-bcb8-b1e399ccad8a.jpg",
+    "file": "apps/configurator/public/client-assets/kitchen-set-01/carcass-artificial-leather.jpg",
+    "sha256": "1c6985a3c8f455293a962ce59f070598a6907cbe59635a3ba4e416d7bdccc3fc"
+  }
+]

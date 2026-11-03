@@ -1,6 +1,10 @@
 # Client inputs and handoff checklist
 
-Purpose: collect everything needed to complete the agreed scope. These items are not verified as received. The developer audits and implements; Casen Doors supplies or approves catalogue content, business rules, assets and wording.
+Purpose: collect everything needed to complete the agreed scope. Statuses below are the baseline; the dated receipt record identifies partial inputs received. The developer audits and implements; Casen Doors supplies or approves catalogue content, business rules, assets and wording.
+
+## Receipt: 3 November 2026
+
+The [first kitchen collection](client-inputs/2026-11-03/README.md) includes an option-sheet PDF, feedback screenshot and 14 option photographs. Layout and carcass labels are visible in the sources; island/storage labels in the prototype are drafts. Prices, dimensions, compatibility, full-combination photos, exact product title and quotation PDF sample remain pending. The option sheet does not satisfy the quotation-sample requirement. Signature now previews these assets with pricing disabled.
 
 ## Required inputs
 

@@ -2,11 +2,11 @@ import { z } from 'zod';
 
 const id = z.string().min(1).max(100);
 const price = z.number().int().min(0).max(100_000_000);
-const base = z.object({ id, name: z.string().min(1), description: z.string(), price, active: z.boolean() });
+const base = z.object({ id, name: z.string().min(1), description: z.string(), price, active: z.boolean(), image: z.string().optional() });
 const layout = base.extend({ family: z.enum(['single', 'l-shape', 'u-shape', 'galley']), dimensions: z.string().min(1) });
 const option = base.extend({ layoutIds: z.array(id).min(1), dimensions: z.string().optional(), swatch: z.string().optional(), group: z.string().optional() });
 export const catalogueSchema = z.object({
-  revision: id, demo: z.boolean(), currency: z.literal('GBP'),
+  revision: id, demo: z.boolean(), pricingStatus: z.enum(['demo', 'pending', 'approved']).default('demo'), productTitle: z.string().optional(), currency: z.literal('GBP'),
   vatBasisPoints: z.number().int().min(0).max(10000), vatTreatment: z.literal('exclusive'),
   layouts: z.array(layout).min(1), islands: z.array(option).min(1), storage: z.array(option), carcasses: z.array(option).min(1),
   referenceImage: z.string().min(1), detailImage: z.string().min(1),

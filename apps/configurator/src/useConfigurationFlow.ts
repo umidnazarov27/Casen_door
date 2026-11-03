@@ -1,7 +1,7 @@
 import { useReducer, useRef, useState } from 'react';
 import { calculatePrice, changeSelection, initialSelection, type Catalogue, type SelectionChange } from '@casen/domain';
 
-export const configurationSteps = ['Layout', 'Island', 'Storage', 'Carcass'];
+export const configurationSteps = ['Layout', 'Island', 'Carcass', 'Storage'];
 
 /** Shared behaviour for the original prototype and the client design concepts. */
 export function useConfigurationFlow(catalogue: Catalogue, apiBase: string) {
@@ -13,19 +13,21 @@ export function useConfigurationFlow(catalogue: Catalogue, apiBase: string) {
   const requestKey = useRef<string | null>(null);
   const title = useRef<HTMLHeadingElement>(null);
   const { selection } = state;
-  const price = selection.layoutId ? calculatePrice(catalogue, selection, false) : null;
-  const canContinue = step === 0 ? Boolean(selection.layoutId) : step === 1 ? Boolean(selection.islandId) : step === 2 || Boolean(selection.carcassId);
-  const maxStep = !selection.layoutId ? 0 : !selection.islandId ? 1 : 3;
+  const price = selection.layoutId && catalogue.pricingStatus !== 'pending' ? calculatePrice(catalogue, selection, false) : null;
+  const canContinue = step === 0 ? Boolean(selection.layoutId) : step === 1 ? Boolean(selection.islandId) : step === 3 || Boolean(selection.carcassId);
+  const maxStep = !selection.layoutId ? 0 : !selection.islandId ? 1 : !selection.carcassId ? 2 : 3;
   const layout = catalogue.layouts.find(item => item.id === selection.layoutId);
 
   function select(change: SelectionChange) {
     dispatch(change); setError(''); setPdfUrl(''); requestKey.current = null;
   }
   function navigate(next: number) {
+    if (next < 0 || next > maxStep || busy) return;
     setStep(next);
     requestAnimationFrame(() => title.current?.focus({ preventScroll: true }));
   }
   async function fileQuotation() {
+    if (catalogue.pricingStatus === 'pending') { setError('Pricing will be added once confirmed.'); return; }
     const tab = window.open('about:blank', '_blank');
     if (tab) { tab.opener = null; tab.document.title = 'Preparing quotation'; tab.document.body.textContent = 'Preparing your quotation…'; }
     setBusy(true); setError('');

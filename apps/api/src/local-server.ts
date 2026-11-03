@@ -1,6 +1,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { clientCatalogue } from '../../../fixtures/client-catalogue';
 import { demoCatalogue } from '../../../fixtures/catalogue';
 import { createDemoService } from './service';
 
@@ -26,7 +27,7 @@ export function startLocalApi(port = 3001) {
     response.setHeader('X-Content-Type-Options', 'nosniff');
     const url = new URL(request.url ?? '/', 'http://127.0.0.1');
     try {
-      if (request.method === 'GET' && url.pathname === '/api/catalogue') return json(response, 200, demoCatalogue);
+      if (request.method === 'GET' && url.pathname === '/api/catalogue') return json(response, 200, url.searchParams.get('collection') === 'client' ? clientCatalogue : demoCatalogue);
       const asset = /^\/demo-assets\/(kitchen-reference|storage-reference)\.png$/.exec(url.pathname);
       if (request.method === 'GET' && asset) {
         const path = fileURLToPath(new URL(`../../../fixtures/images/${asset[1]}.png`, import.meta.url));

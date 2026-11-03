@@ -1,18 +1,26 @@
 # Casen Doors kitchen configurator
 
-Kitchen configurator for the existing Casen Doors Shopify storefront. Customers choose a preset layout, island, storage and carcass, review an estimated price and generate a provisional quotation PDF. The planned production flow also supports a separately confirmed email copy.
+Kitchen configurator for the existing Casen Doors Shopify storefront. Customers choose a preset layout, island, carcass and storage, review an estimated price and generate a provisional quotation PDF. The planned production flow also supports a separately confirmed email copy.
 
 This repository contains the application code, project plans, reference assets, design presentations and client follow-up materials.
 
 ## Current status
 
-Updated: 27 October 2026.
+Updated: 4 November 2026.
 
 - The local prototype includes all four selection steps, compatibility checks, sample pricing, a photo gallery and quotation PDF generation.
-- The client selected **Option 01: Signature**. Three original design concepts remain available for reference.
+- The client selected **Option 01: Signature**. It now uses the first supplied kitchen collection: 14 photographs, four layouts, three island choices (including no island), four carcass finishes and four storage options. The step order is Layout → Island → Carcass → Storage.
+- Signature pricing and quotations are deferred until client prices are supplied. The original demo retains illustrative pricing and PDF generation.
 - The full kitchen page structure is ready for review in Google Slides. A Google Sheets workbook collects catalogue information and page content.
-- Shopify installation, the final catalogue and photographs, production storage, email delivery and launch acceptance remain open. Local prices, dimensions and reference images are demonstrative.
+- Shopify installation, the final catalogue and photographs, production storage, email delivery and launch acceptance remain open. Original-demo prices and dimensions are demonstrative; client option photos do not yet cover every final combination.
 - The quotation PDF still needs the client's sample and approved content. The follow-up email is a draft, and client sharing/sending has not been recorded as complete.
+
+## Latest client materials
+
+- [3 November client inputs and implementation notes](docs/client-inputs/2026-11-03/README.md)
+- [Kitchen product option sheet](docs/client-inputs/2026-11-03/Kitchen%20Product%20page.pdf)
+- [Client feedback: step order and pricing](docs/client-inputs/2026-11-03/client-feedback.png)
+- [Photo manifest](docs/client-inputs/2026-11-03/assets.json) and [14 original photos](apps/configurator/public/client-assets/kitchen-set-01/)
 
 ## Working documents online
 
