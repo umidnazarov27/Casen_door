@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('keeps selections, opens a real PDF without email, and exposes a download link', async ({ page, request }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('/');
+  await page.goto('/demo');
   await expect(page.getByRole('heading', { name: 'Choose your layout' })).toBeVisible();
   await page.getByRole('radio', { name: /L-shaped/ }).check();
   await page.getByRole('button', { name: 'Continue to Island' }).click();
@@ -29,7 +29,7 @@ test('keeps selections, opens a real PDF without email, and exposes a download l
 });
 
 test('has no horizontal overflow and supports the image dialog', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/demo');
   await expect(page.getByRole('heading', { name: 'Choose your layout' })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Enlarge reference image' }).click();

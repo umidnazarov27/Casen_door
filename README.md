@@ -11,7 +11,8 @@ Updated: 4 November 2026.
 - The local prototype includes all four selection steps, compatibility checks, sample pricing, a photo gallery and quotation PDF generation.
 - The client selected **Option 01: Signature**. It now uses the first supplied kitchen collection: 14 photographs, four layouts, three island choices (including no island), four carcass finishes and four storage options. The step order is Layout → Island → Carcass → Storage.
 - Signature pricing and quotations are deferred until client prices are supplied. The original demo retains illustrative pricing and PDF generation.
-- The full kitchen page structure is ready for review in Google Slides. A Google Sheets workbook collects catalogue information and page content.
+- The selected Signature page now opens directly at `/` and `/kitchen`, with all ten sections from the PowerPoint: configurator, features/specifications, colour guide, benefits, previous work, guarantee, FAQ, reviews placeholder, related products and footer. All page copy is in English. See [page implementation and pending content](docs/PRODUCT_PAGE.md).
+- Google Slides preserves the structure review; Google Sheets collects approved catalogue information and page content. Missing specifications, documents, project photos and reviews are explicitly marked as pending in the local preview.
 - Shopify installation, the final catalogue and photographs, production storage, email delivery and launch acceptance remain open. Original-demo prices and dimensions are demonstrative; client option photos do not yet cover every final combination.
 - The quotation PDF still needs the client's sample and approved content. The follow-up email is a draft, and client sharing/sending has not been recorded as complete.
 
@@ -45,6 +46,7 @@ Google documents and local exports are separate copies. Changes in Drive do not 
 | [Acceptance checklist](docs/ACCEPTANCE.md) | The ten MVP acceptance criteria and the evidence required for delivery. |
 | [Development guide](docs/DEVELOPMENT.md) | Local setup, commands, demo endpoints and known limitations. |
 | [Source specification snapshot](docs/SOURCE_SPECIFICATION.md) | Captured MVP v1.3 specification dated 28 September 2026. |
+| [Selected product page](docs/PRODUCT_PAGE.md) | Implemented PPTX sections, content editing points, pending client inputs and verification. |
 | [Design concepts](docs/DESIGN_CONCEPTS.md) | Signature, Architectural and Studio concepts, review links, asset provenance and recorded checks. |
 | [Meeting recap: 25 October](docs/MEETING_2026-10-25.md) | Page sections, option counts, responsibilities, timeline questions and follow-up document links. |
 | [Continuation prompt](CONTINUE_PROMPT.md) | Instructions for resuming development while preserving the agreed scope and existing work. |
@@ -80,6 +82,8 @@ Use the Google Slides and Google Sheets links above for ongoing client review. T
 
 ### Prototype evidence
 
+Latest: [4 November full-page verification](evidence/2026-11-04-product-page.md), [desktop page](evidence/2026-11-04/desktop-full.png) and [mobile page](evidence/2026-11-04/mobile-full.png).
+
 | Material | File |
 | --- | --- |
 | First local implementation record | [Verification notes](evidence/2026-09-28-first-slice.md) |
@@ -104,8 +108,9 @@ npm run dev
 
 | Preview | Local URL |
 | --- | --- |
-| Original working prototype | [127.0.0.1:5173](http://127.0.0.1:5173/) |
-| All design concepts | [Design comparison](http://127.0.0.1:5173/designs) |
+| Selected Signature product page | [127.0.0.1:5173](http://127.0.0.1:5173/) |
+| Original pricing/PDF demo | [Demo](http://127.0.0.1:5173/demo) |
+| Archived design concepts | [Design comparison](http://127.0.0.1:5173/designs) |
 | Selected design | [01 Signature](http://127.0.0.1:5173/designs/signature) |
 | Alternative design | [02 Architectural](http://127.0.0.1:5173/designs/architectural) |
 | Alternative design | [03 Studio](http://127.0.0.1:5173/designs/studio) |

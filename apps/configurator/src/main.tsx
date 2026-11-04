@@ -2,6 +2,7 @@ import { createRoot, type Root } from 'react-dom/client';
 import { lazy, Suspense } from 'react';
 import { App } from './App';
 
+const KitchenProductPage = lazy(() => import('./designs/KitchenProductPage'));
 const DesignReview = lazy(() => import('./designs/DesignReview'));
 
 const roots = new Map<HTMLElement, Root>();
@@ -11,8 +12,18 @@ function mount(scope: ParentNode = document) {
     const root = createRoot(element);
     roots.set(element, root);
     const apiBase = element.dataset.apiBase ?? '/apps/casen-configurator';
-    const showDesignReview = element.dataset.designReview === 'true' && /^\/designs(?:\/|$)/.test(window.location.pathname);
-    root.render(showDesignReview ? <Suspense fallback={<p>Загрузка вариантов…</p>}><DesignReview apiBase={apiBase} /></Suspense> : <App apiBase={apiBase} />);
+    const preview = element.dataset.designReview === 'true';
+    const path = window.location.pathname;
+    const showArchive = preview && /^\/designs(?:\/|$)/.test(path) && path !== '/designs/signature';
+    if (showArchive) {
+      root.render(<Suspense fallback={<p>Loading design archive…</p>}><DesignReview apiBase={apiBase} /></Suspense>);
+      return;
+    }
+    if (preview && path !== '/demo') {
+      root.render(<Suspense fallback={<p>Loading your kitchen…</p>}><KitchenProductPage apiBase={apiBase} /></Suspense>);
+      return;
+    }
+    root.render(<App apiBase={apiBase} />);
   });
 }
 mount();

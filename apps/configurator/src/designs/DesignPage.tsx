@@ -1,5 +1,6 @@
 import { formatMoney, REQUIRED_NOTICE, type Catalogue } from '@casen/domain';
 import { selectionImages } from '../selectionImages';
+import { KitchenFooter } from './KitchenFooter';
 import { KitchenDetails } from './KitchenDetails';
 import { Gallery } from '../Gallery';
 import { OptionCards } from '../OptionCards';
@@ -21,10 +22,11 @@ export function DesignPage({ concept, catalogue, apiBase }: { concept: Concept; 
     <div className={s.announcement}>CASEN DOORS <span>·</span> THE KITCHEN COLLECTION</div>
     <header className={s.brandHeader}>
       <a href="https://casen-doors.com/" target="_blank" rel="noreferrer"><img src={logo} alt="Casen Doors home" /></a>
-      <nav aria-label="Brand navigation"><a href="https://casen-doors.com/" target="_blank" rel="noreferrer">Our collection</a><a href="#concept-configure" aria-current="page">Kitchens</a><a href="#concept-details">The details</a></nav>
+      <nav aria-label="Brand navigation"><a href="https://casen-doors.com/collections/all-doors" target="_blank" rel="noreferrer">Doors</a><a href="#concept-configure" aria-current="page">Kitchens</a><a href={hasOptionImages ? '#features' : '#concept-details'}>The details</a></nav>
       <a className={s.headerAction} href="#concept-configure">Create your kitchen <span>↗</span></a>
     </header>
     <main>
+      {hasOptionImages && <nav className={s.breadcrumb} aria-label="Breadcrumb"><a href="https://casen-doors.com/">Home</a><span>/</span><span>Kitchens</span><span>/</span><span aria-current="page">{catalogue.productTitle}</span></nav>}
       <div className={s.pageIntro}><div><p className={s.eyebrow}>PERSONAL BY DESIGN</p><h1>{(catalogue.productTitle ?? concept.headline).split('\n').map((line, index) => <span key={line} className={index ? s.secondLine : ''}>{line}</span>)}</h1></div><div className={s.introAside}><p>{concept.intro}</p><a href="#concept-configure">Explore the possibilities <span>↓</span></a></div></div>
       <div className={s.designWorkspace} id="concept-configure">
         <div className={s.visualArea}>
@@ -53,6 +55,6 @@ export function DesignPage({ concept, catalogue, apiBase }: { concept: Concept; 
       </div>
       {hasOptionImages ? <KitchenDetails catalogue={catalogue} /> : <section className={s.details} id="concept-details"><p className={s.eyebrow}>THOUGHTFULLY PUT TOGETHER</p><div><article><span>01</span><h3>A layout for your life</h3><p>Start with a considered arrangement and make the details your own.</p></article><article><span>02</span><h3>Every detail, in view</h3><p>Explore storage, island options and the interior finish of your cabinetry.</p></article><article><span>03</span><h3>A clear next step</h3><p>Create a provisional quotation to discuss with the Casen Doors team.</p></article></div></section>}
     </main>
-    <footer className={s.brandFooter}><div><img src={logo} alt="Casen Doors" /><span>Considered spaces. Everyday living.</span><a href="https://casen-doors.com/" target="_blank" rel="noreferrer">Visit Casen Doors ↗</a></div><p>{REQUIRED_NOTICE}</p><small>{pricingPending ? 'Client collection preview · Prices, dimensions, compatibility and final product title are awaiting confirmation. Images show individual options.' : `Design concept ${concept.number} · Demonstration prices, dimensions and VAT. Reference imagery; final-combination photos to be supplied.`}</small></footer>
+    {hasOptionImages ? <KitchenFooter /> : <footer className={s.brandFooter}><div><img src={logo} alt="Casen Doors" /><span>Considered spaces. Everyday living.</span><a href="https://casen-doors.com/" target="_blank" rel="noreferrer">Visit Casen Doors ↗</a></div><p>{REQUIRED_NOTICE}</p><small>{pricingPending ? 'Client collection preview · Prices, dimensions, compatibility and final product title are awaiting confirmation. Images show individual options.' : `Design concept ${concept.number} · Demonstration prices, dimensions and VAT. Reference imagery; final-combination photos to be supplied.`}</small></footer>}
   </div>;
 }

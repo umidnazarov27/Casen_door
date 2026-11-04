@@ -16,8 +16,8 @@ Received 3 November 2026. Implemented in the local Signature preview; this is no
 - Four layouts, illuminated/standard/no island, four carcass finishes and four optional storage choices.
 - Photo cards, selection-aware gallery, thumbnails and enlarged view. The most recently selected storage option appears first. No island uses the selected layout image.
 - Product title comes from catalogue data. `Kitchen Collection` is a temporary title pending the exact approved name.
-- Layout and finish photo sections plus draft FAQ copy in English.
-- Prices, price modifiers and quotations are disabled for this client catalogue until pricing is supplied. The original demo remains available at `/` for PDF verification.
+- Full product-page structure and draft English content now follow the selected design and PowerPoint. See [page implementation](../../PRODUCT_PAGE.md).
+- Prices, price modifiers and quotations are disabled for this client catalogue until pricing is supplied. The original demo remains available at `/demo` for PDF verification.
 
 ## Assumptions and outstanding inputs
 
@@ -27,7 +27,7 @@ Received 3 November 2026. Implemented in the local Signature preview; this is no
 - Prices and VAT are pending. Numeric zero fields are internal schema placeholders, never free/included offers; `pricingStatus: pending` blocks calculation and quotation creation.
 - Full-combination photographs, fixed dimensions, cabinet materials/thicknesses, final title, guarantee/colour PDFs and quotation sample remain outstanding.
 - Images represent separate options, not a composite of the customer's full selection. The tall pull-out source is low resolution; a larger original is needed for final photography.
-- New FAQ text is draft explanatory copy. Remaining full-page sections and Shopify integration are still open.
+- New FAQ text is draft explanatory copy. The full local section structure is implemented; approved content and Shopify integration remain open.
 
 ## Verification
 

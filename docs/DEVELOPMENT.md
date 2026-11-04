@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5173. The frontend proxies `/api` and `/demo-assets` to the local API on 127.0.0.1:3001. Both processes start together. Ctrl-C stops them. Frontend edits reload; restart `npm run dev` after changes to the local API, shared server logic or PDF renderer.
+Open http://127.0.0.1:5173 for the selected Signature kitchen page. `/kitchen` and `/designs/signature` show the same selected page without a design toolbar. `/demo` retains the original priced catalogue and PDF flow; `/designs` is the archived concept comparison. The frontend proxies `/api` and `/demo-assets` to the local API on 127.0.0.1:3001. Both processes start together. Ctrl-C stops them. Frontend edits reload; restart `npm run dev` after changes to the local API, shared server logic or PDF renderer.
 
 If the bundled Codex Node runtime is needed on this computer:
 

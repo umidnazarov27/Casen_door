@@ -6,7 +6,9 @@ Prepared: 28 September 2026. Baseline: [MVP v1.3](docs/SOURCE_SPECIFICATION.md).
 
 4 November 2026: [Client collection 01](docs/client-inputs/2026-11-03/README.md) is integrated into the local Signature preview. Four layouts, two pictured islands plus no island, four carcass finishes and four storage systems use 14 supplied photos. Client feedback changes the flow to Layout → Island → Carcass → Storage. Prices are deferred; pending-price estimates and quotations are blocked. The client PDF is an option sheet, not the missing quotation sample. Pricing, dimensions, compatibility, exact title, production photo coverage and Shopify integration remain open. Verification details and assumptions are recorded with the inputs.
 
-Next: obtain approved pricing/VAT, dimensions, compatibility/storage rules and final product title; then connect the approved catalogue and finish the remaining product-page sections in the Shopify preview.
+The full selected Signature product-page structure is now implemented locally, following the ten sections in the PowerPoint. The main preview opens directly without a design selector. See [page implementation](docs/PRODUCT_PAGE.md) and [verification](evidence/2026-11-04-product-page.md).
+
+Next: obtain approved pricing/VAT, dimensions, compatibility/storage rules, final title and page content/documents; audit Shopify access, then integrate the page with the existing theme header/footer, review plugin and editable content. The local layout does not establish Shopify acceptance.
 
 ## Selected implementation approach
 
