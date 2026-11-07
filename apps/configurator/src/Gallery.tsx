@@ -21,7 +21,7 @@ export function Gallery({ catalogue, className = '', images }: { catalogue: Cata
   const close = () => { setEnlarged(false); trigger.current?.focus(); };
   return <aside className={`${styles.gallery} ${className}`} aria-label="Kitchen reference gallery">
     <div className={styles.imageFrame}>
-      {failed ? <div className={styles.placeholder}>Reference image unavailable.<br />Your configuration is still saved.</div> : <img className={styles.heroImage} style={images ? { objectFit: 'contain' } : undefined} src={src} alt={current.label} onError={() => setFailedImages(items => [...items, src])} />}
+      {failed ? <div className={styles.placeholder}>Reference image unavailable.<br />Your configuration is still saved.</div> : <img className={styles.heroImage} src={src} alt={current.label} onError={() => setFailedImages(items => [...items, src])} />}
       {!failed && <button ref={trigger} className={styles.expand} aria-label="Enlarge reference image" onClick={() => setEnlarged(true)}>↗</button>}
       <span className={styles.imageTag}>{images ? current.label : 'REFERENCE VISUAL'}</span>
     </div>

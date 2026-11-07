@@ -18,7 +18,7 @@ The [first kitchen collection](client-inputs/2026-11-03/README.md) includes an o
 | Storage | Names/descriptions, prices, photos, multi-select/exclusive groups, any minimum/maximum rules, compatibility | Storage | Not verified |
 | Carcasses | Names/descriptions, named swatches, photos, price adjustments and compatibility | Carcass | Not verified |
 | Business pricing | Currency, prices/modifiers, agreed extras if any, VAT treatment/rates/rounding, worked examples | Accurate quotation | Not verified |
-| Final-combination photos | Mapping for every valid layout/island/storage/carcass combination; confirmed depiction and approved assets | Launch photo coverage | Not verified |
+| Final-combination photos | Mapping for every valid layout/island/storage/carcass combination; confirmed depiction and approved assets. `npm run report:photos` writes the checklist to fill in | Launch photo coverage | Not verified; 0 of 768 for collection 01 |
 | Other imagery | Full-kitchen/detail views, dimension images, approved generic/fallback references | Galleries and failures | Not verified |
 | Quotation content | PDF/email branding, wording, staff contact details if desired; confirm required notice and personalization flow | Final PDF/email | Not verified |
 | Services | Available hosting/email capabilities, sender setup, service-account owner, ongoing costs, authorized test recipient | PDF/email operation | Not verified |
@@ -51,7 +51,7 @@ Provide at least one basic layout without an island (where valid), one with an i
 - Required catalogue, compatibility and pricing rules received: pending.
 - Required photographs and other client inputs received: pending.
 - Contractual start date based on required input receipt: unset.
-- Target delivery date: unset; calculate as six weeks from the established start, with the specification's ±3-calendar-day allowance.
+- Target delivery date: unset contractually; calculate as six weeks from the established start, with the specification's ±3-calendar-day allowance. The client asked on 8 November 2026 to finish everything by mid-December 2026 ([decisions](client-inputs/2026-11-08/README.md)).
 - Architecture and live integration approval: pending.
 
 Record dates and source references as inputs arrive. Missing content may allow demo development but cannot be represented as launch-ready.

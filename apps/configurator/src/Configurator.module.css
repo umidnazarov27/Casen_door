@@ -98,7 +98,7 @@
 @media (prefers-reduced-motion:no-preference) { .card, .listCard, .primary { transition:background .15s,border-color .15s; } }
 
 .optionImage { display:block; width:100%; aspect-ratio:1.65; object-fit:cover; margin-bottom:8px; }
-.optionThumbnail { display:block; width:88px; height:88px; object-fit:contain; background:#f3f1ec; flex-shrink:0; }
+.optionThumbnail { display:block; width:88px; height:88px; object-fit:cover; background:#f3f1ec; flex-shrink:0; }
 .thumbnails { overflow-x:auto; padding-bottom:5px; }
 .thumbnails button { flex-shrink:0; }
-@media(max-width:760px) { .optionThumbnail { width:64px; height:72px; } }
+@media(max-width:760px) { .optionThumbnail { width:64px; height:64px; } }

@@ -5,7 +5,6 @@ export const kitchenImage = (name: string) => `/client-assets/kitchen-set-01/${n
 
 export const kitchenContent = {
   colourGuide: null as string | null,
-  guaranteeDocument: null as string | null,
   features: [
     { title: 'A layout for your space', description: 'Single wall, L-shaped, U-shaped or galley. Start with the arrangement that suits your room.', image: 'layout-l-shape' },
     { title: 'An island of your own', description: 'Explore the illuminated and standard island options, or keep your space open.', image: 'island-illuminated' },
@@ -33,7 +32,7 @@ export const kitchenContent = {
     { question: 'How do I get a quotation?', answer: 'Once approved pricing is available, you will be able to open or download a provisional quotation after configuring your kitchen, without entering an email address. Pricing is not yet available in this preview.' },
     { question: 'Do the photographs show my complete configuration?', answer: 'The photographs show individual layouts, islands, carcass finishes and storage options. They do not show every selected combination together.' },
     { question: 'What about delivery, installation and care?', answer: 'Please discuss delivery, installation arrangements and care requirements with the Casen Doors team before placing an order. Shipping is excluded from the provisional quotation.' },
-    { question: 'What does the kitchen guarantee cover?', answer: 'Kitchen-specific coverage, exclusions and functionality terms are awaiting confirmation. The approved guarantee document will be available in the guarantee section.' },
+    { question: 'What does the kitchen guarantee cover?', answer: 'Guarantee cover for kitchens is set out in the Casen Doors terms and conditions, available from the Terms & conditions link at the bottom of this page.' },
   ],
   // Public storefront examples, not an approved recommendation rule. No copied prices.
   related: relatedProducts,

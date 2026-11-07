@@ -1,5 +1,10 @@
-import { validateCatalogue } from '@casen/domain';
+import { photoCoverage, validateCatalogue } from '@casen/domain';
 import { demoCatalogue } from '../fixtures/catalogue';
-const catalogue = validateCatalogue(demoCatalogue);
-console.log(`Valid demo schema: ${catalogue.layouts.length} layouts, ${catalogue.islands.length} islands, ${catalogue.storage.length} storage options, ${catalogue.carcasses.length} carcasses.`);
-console.log('Launch coverage: NOT VERIFIED. No exact-combination photographs are configured.');
+import { clientCatalogue } from '../fixtures/client-catalogue';
+
+for (const raw of [demoCatalogue, clientCatalogue]) {
+  const catalogue = validateCatalogue(raw);
+  const coverage = photoCoverage(catalogue);
+  console.log(`${catalogue.revision}: valid schema, ${catalogue.layouts.length} layouts, ${catalogue.islands.length} islands, ${catalogue.carcasses.length} carcasses, ${catalogue.storage.length} storage options.`);
+  console.log(`  Launch photo coverage: ${coverage.launchReady ? 'COMPLETE' : 'NOT COMPLETE'} (${coverage.verified} of ${coverage.total} combinations client-verified, ${coverage.missing} missing). Details: npm run report:photos`);
+}

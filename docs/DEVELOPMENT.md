@@ -33,7 +33,8 @@ This path is a local convenience, not a deployment dependency. No environment se
 | `npm run test:e2e` | Desktop and Pixel-sized Chromium flows; starts server if needed |
 | `npm run build` | Build local-preview frontend under dist/preview |
 | `npm run build:theme` | Generate JS/CSS for the Shopify Liquid section |
-| `npm run validate:catalogue` | Validate the demo schema; explicitly reports unverified launch photo coverage |
+| `npm run validate:catalogue` | Validate the demo and client catalogues and print launch photo coverage |
+| `npm run report:photos` | Write the photo coverage report and per-combination checklist CSV to output/photo-coverage/<revision>/ (`-- --catalogue=demo`, `-- --strict` to fail unless coverage is complete) |
 | `npm run sample:pdf` | Generate output/pdf/casen-demo-quotation.pdf |
 
 The preview build still needs its local fixture API. It is not a ready-to-deploy static site. The theme bundle contains no fixture catalogue and needs a real app proxy/backend before it works on Shopify. See [shopify/README.md](../shopify/README.md).
@@ -49,7 +50,7 @@ The preview build still needs its local fixture API. It is not a ready-to-deploy
 ## Deliberate prototype limits
 
 - GBP, 20% exclusive VAT, all prices/dimensions and compatibility are fixtures, not approved business rules. Current schema does not yet support negative carcass adjustments or other tax policies/currencies.
-- Images come from the supplied design prototype and are always labelled references. Exact-combination mappings, generic fallback chains and launch coverage are not implemented.
+- Images come from the supplied design prototype and are always labelled references. Combination enumeration, combination keys and the photo coverage report are implemented; the client collection has 768 reachable combinations under its placeholder compatibility and no combination photos yet. Showing combination photos in the gallery and the fallback chain are not implemented.
 - The demo catalogue is a local adapter; real Metaobjects import/pagination/publication remain pending.
 - Quotation files/state live in process memory, with a 100-request safety cap; links expire after one hour and all links stop working after restart. Restart the local server to reset the demo store. Commercial 90-day validity is printed separately and does not imply file retention.
 - PDF layout is provisional pending the user's sample. Dates currently use UTC calendar dates; production timezone policy is unconfirmed.

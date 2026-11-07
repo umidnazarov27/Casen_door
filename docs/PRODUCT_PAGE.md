@@ -21,7 +21,7 @@ Source: [Kitchen Page Review Final](../output/client-followup-2026-10-25/Kitchen
 | 3 | 5 | Finish photographs and colour-guide download placement | Kitchen colour PDF and approved link label; download disabled until supplied |
 | 4 | 6 | Three alternating image/text benefits | Final headings, copy, block count and images |
 | 5 | 7 | Two alternating project placements | Actual completed-project photos/captions; collection imagery is explicitly labelled as preview |
-| 6 | 8 | Proposed ten-year and functionality guarantee section | Approved terms/document; download disabled until supplied |
+| 6 | 8 | Removed 8 November 2026 at the client's request | Guarantee terms move into the store terms and conditions (footer link); FAQ answer points there |
 | 7 | 9 | Seven expandable FAQ rows | Client-approved questions and answers |
 | 8 | 10 | Google Reviews placement | Existing Shopify plugin, selected review scope and live data; no invented rating/reviews |
 | 9 | 11 | Four photographed products with storefront links | Client choice or Shopify recommendation rule |
@@ -29,9 +29,11 @@ Source: [Kitchen Page Review Final](../output/client-followup-2026-10-25/Kitchen
 
 The optional Order Process on slide 12 is not included: its inclusion and position remain unconfirmed. The PPTX itself has not been changed.
 
+Image frames are fixed and crop photos to fill them. Recommended export sizes are in [IMAGE_GUIDE.md](IMAGE_GUIDE.md).
+
 ## Editing content
 
-- `apps/configurator/src/designs/kitchenContent.ts`: draft features, benefits, specifications, project placements, FAQs and document URLs. Add approved `colourGuide` and `guaranteeDocument` URLs to enable those links, and update the surrounding pending copy.
+- `apps/configurator/src/designs/kitchenContent.ts`: draft features, benefits, specifications, project placements, FAQs and document URLs. Add the approved `colourGuide` URL to enable that link, and update the surrounding pending copy.
 - `fixtures/client-catalogue.ts`: temporary product title, option labels, photographs and pending-pricing flag.
 - `apps/configurator/src/designs/relatedProducts.json`: storefront product titles, destinations, local photo paths and original photo URLs.
 - `KitchenDetails.tsx`, `KitchenFooter.tsx` and `KitchenPage.module.css`: section structure and responsive presentation.

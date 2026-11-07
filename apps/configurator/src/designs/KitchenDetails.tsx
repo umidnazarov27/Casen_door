@@ -50,13 +50,6 @@ function PreviousWork() {
   </section>;
 }
 
-function Guarantee() {
-  return <section id="guarantee" className={`${s.section} ${s.guarantee}`} aria-labelledby="guarantee-title">
-    <div className={s.guaranteeMark} aria-hidden="true"><span>10</span><p>YEAR GUARANTEE</p><small>PROPOSED · TERMS TO BE CONFIRMED</small></div>
-    <div className={s.editorialText}><p className={s.kicker}>CARE BEYOND THE DESIGN</p><h2 id="guarantee-title">Your kitchen guarantee</h2><p>A 10-year guarantee is proposed for this collection. Kitchen coverage, exclusions and functionality terms will be confirmed in the approved guarantee document.</p><h3>Functionality guarantee</h3><p>Full details of the applicable cover will be available before ordering.</p><DocumentLink href={content.guaranteeDocument} label="Download kitchen guarantee" /></div>
-  </section>;
-}
-
 function FrequentlyAskedQuestions() {
   return <section id="faq" className={`${s.section} ${s.faq}`} aria-labelledby="faq-title">
     <div><p className={s.kicker}>HERE TO HELP</p><h2 id="faq-title">Frequently asked questions</h2><p>Still have a question?</p><a className={s.textLink} href="https://casen-doors.com/pages/contact" target="_blank" rel="noreferrer">Contact the team ↗</a></div>
@@ -81,7 +74,11 @@ function RelatedProducts() {
   </section>;
 }
 
-/** Section order follows slides 2–11 of Kitchen_Page_Review_Final.pptx. */
+/**
+ * Section order follows slides 2–11 of Kitchen_Page_Review_Final.pptx.
+ * The guarantee section (slide 8) was removed at the client's request on 8 November 2026:
+ * guarantee terms move into the store-wide terms and conditions, linked from the footer.
+ */
 export function KitchenDetails({ catalogue }: { catalogue: Catalogue }) {
-  return <div className={s.content} id="concept-details"><Features catalogue={catalogue} /><ColourOptions catalogue={catalogue} /><Benefits /><PreviousWork /><Guarantee /><FrequentlyAskedQuestions /><Reviews /><RelatedProducts /></div>;
+  return <div className={s.content} id="concept-details"><Features catalogue={catalogue} /><ColourOptions catalogue={catalogue} /><Benefits /><PreviousWork /><FrequentlyAskedQuestions /><Reviews /><RelatedProducts /></div>;
 }

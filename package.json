@@ -21,7 +21,8 @@
     "test:integration": "vitest run tests/integration",
     "test:e2e": "playwright test",
     "validate:catalogue": "node --import tsx scripts/validate-catalogue.ts",
-    "sample:pdf": "node --import tsx scripts/sample-pdf.ts"
+    "sample:pdf": "node --import tsx scripts/sample-pdf.ts",
+    "report:photos": "node --import tsx scripts/photo-coverage.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "4.9.0",

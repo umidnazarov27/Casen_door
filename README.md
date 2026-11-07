@@ -11,13 +11,14 @@ Updated: 4 November 2026.
 - The local prototype includes all four selection steps, compatibility checks, sample pricing, a photo gallery and quotation PDF generation.
 - The client selected **Option 01: Signature**. It now uses the first supplied kitchen collection: 14 photographs, four layouts, three island choices (including no island), four carcass finishes and four storage options. The step order is Layout → Island → Carcass → Storage.
 - Signature pricing and quotations are deferred until client prices are supplied. The original demo retains illustrative pricing and PDF generation.
-- The selected Signature page now opens directly at `/` and `/kitchen`, with all ten sections from the PowerPoint: configurator, features/specifications, colour guide, benefits, previous work, guarantee, FAQ, reviews placeholder, related products and footer. All page copy is in English. See [page implementation and pending content](docs/PRODUCT_PAGE.md).
+- The selected Signature page now opens directly at `/` and `/kitchen`, with the PowerPoint sections: configurator, features/specifications, colour guide, benefits, previous work, FAQ, reviews placeholder, related products and footer. All page copy is in English. See [page implementation and pending content](docs/PRODUCT_PAGE.md).
 - Google Slides preserves the structure review; Google Sheets collects approved catalogue information and page content. Missing specifications, documents, project photos and reviews are explicitly marked as pending in the local preview.
 - Shopify installation, the final catalogue and photographs, production storage, email delivery and launch acceptance remain open. Original-demo prices and dimensions are demonstrative; client option photos do not yet cover every final combination.
 - The quotation PDF still needs the client's sample and approved content. The follow-up email is a draft, and client sharing/sending has not been recorded as complete.
 
 ## Latest client materials
 
+- [8 November client decisions](docs/client-inputs/2026-11-08/README.md): guarantee section removed, image frames sized for the website ([image guide](docs/IMAGE_GUIDE.md)), mid-December target
 - [3 November client inputs and implementation notes](docs/client-inputs/2026-11-03/README.md)
 - [Kitchen product option sheet](docs/client-inputs/2026-11-03/Kitchen%20Product%20page.pdf)
 - [Client feedback: step order and pricing](docs/client-inputs/2026-11-03/client-feedback.png)
@@ -153,5 +154,5 @@ Temporary build and render files in `tmp/`, dependencies, environment secrets an
 
 - Fee: USD 2,000 for the described scope. A separate formal invoice is required. Invoice/payment receipt has not been verified in this repository.
 - Timeline: six weeks ±3 calendar days after receipt of all required Shopify access, photographs, catalogue information and pricing rules.
-- The contractual start and launch dates remain unset. The November and January milestones in the meeting notes need clarification.
+- The contractual start and launch dates remain unset. On 8 November the client asked to finish everything by mid-December 2026; this depends on the outstanding inputs and has not been reconciled with the contract terms. See [8 November decisions](docs/client-inputs/2026-11-08/README.md).
 - Confirm the launch catalogue, compatibility, pricing/VAT, exact photographs, PDF/email content, infrastructure and optional features before final acceptance.
